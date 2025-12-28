@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NetVisualizer — Monitor de Red</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">NV</div>
+        <div class="title">
+          <h1>NetVisualizer</h1>
+          <p class="lead">
+            Proyecto de ciberseguridad: Monitorización y geolocalización de
+            tráfico de red en tiempo real.
+          </p>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-ghost" id="github-link" href="#" target="_blank"
+            >Ver en GitHub</a
+          >
+          <a
+            class="btn btn-primary"
+            id="download-zip-btn"
+            href="#"
+            target="_blank"
+            >⤓ Descargar ZIP</a
+          >
+        </div>
+      </header>
+
+      <main>
+        <section class="card">
+          <div class="meta">
+            <strong>Tecnologías:</strong> Python 3 • Scapy • Plotly • Requests •
+            Networking
+          </div>
+
+          <div class="warn">
+            <strong>⚠️ Requisito de ejecución:</strong> Este script requiere
+            privilegios de **Administrador** para poder capturar paquetes de la
+            interfaz de red.
+          </div>
+
+          <h2>Resumen</h2>
+          <p class="lead">
+            Este script analiza el tráfico saliente de la tarjeta de red para
+            identificar destinos externos, utiliza APIs de geolocalización para
+            mapear estas conexiones en un dashboard interactivo global.
+            <div>
+                <b>Instrucciones de uso</b>
+            </div>
+            Una vez que el usuario descarga las
+            librerias pertinentes y ha navegado por distintas webs debe poner el
+            comando <b>python main.py</b> para que le aparezca el archivo
+            <b>mapa_mundial.html</b> con los datos IP de las webs visitadas.
+          </p>
+
+          <h2>Cómo probar (local)</h2>
+          <ol>
+            <li>
+              Clona el repositorio e instala las librerías necesarias:
+              <pre class="code">
+git clone https://github.com/siralex23/NetVisualizer.git
+cd NetVisualizer
+pip install scapy plotly requests pandas</pre
+              >
+            </li>
+            <li>
+              Abre una terminal con permisos de <strong>Administrador</strong>.
+            </li>
+            <li>
+              Ejecuta el script principal:
+              <pre class="code">python main.py</pre>
+            </li>
+          </ol>
+
+          <h2>Demo: Dashboard Unificado</h2>
+          <div class="grid-demos">
+            <div class="card demo-card">
+              <strong>Visualización Global y Registro de IPs</strong>
+              <div class="demo-wrap">
+                <img src="newplot.png" alt="Demo NetVisualizer" class="demo" />
+              </div>
+              <p style="margin-top: 10px; color: #666; font-size: 13px">
+                Reporte final generado tras la captura, mostrando el mapa de
+                conexiones mundiales y la tabla de procedencia por IP.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <aside class="card">
+          <h3>Acciones rápidas</h3>
+          <p style="margin-top: 10px">
+            <a class="download" id="download-zip-cta" href="#" target="_blank"
+              >⤓ Descargar proyecto (.zip)</a
+            >
+          </p>
+          <div style="margin-top: 14px">
+            <strong>Recursos</strong>
+            <p style="font-size: 13px; color: #666; margin: 6px 0">
+              README:
+              <a href="#" id="readme-link" target="_blank">Ver README</a>
+            </p>
+            <p style="font-size: 13px; color: #666; margin: 0">
+              Perfil:
+              <a href="https://github.com/siralex23" target="_blank"
+                >github.com/siralex23</a
+              >
+            </p>
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <small
+          >Proyecto educativo • Análisis de red responsable • © 2025
+          siralex23</small
+        >
+      </footer>
+    </div>
+
+    <script>
+      const GITHUB_USER = "siralex23";
+      const GITHUB_REPO = "NetVisualizer";
+      const repoUrl = `https://github.com/${GITHUB_USER}/${GITHUB_REPO}`;
+      document.getElementById(
+        "download-zip-btn"
+      ).href = `${repoUrl}/archive/refs/heads/main.zip`;
+      document.getElementById(
+        "download-zip-cta"
+      ).href = `${repoUrl}/archive/refs/heads/main.zip`;
+      document.getElementById("github-link").href = repoUrl;
+      document.getElementById("readme-link").href = repoUrl;
+    </script>
+  </body>
+</html>
