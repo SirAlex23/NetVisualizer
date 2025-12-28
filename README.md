@@ -39,4 +39,18 @@ python -m venv venv
 # Instalar dependencias necesarias
 pip install scapy plotly requests pandas
 
+# 2. Ejecución con Privilegios
+[!IMPORTANTE]
+Para capturar tráfico de red, Windows requiere permisos de Administrador. Asegúrate de ejecutar VS Code o la Terminal como Administrador.
+
+python main.py
+
+
+# 3. Generar el Mapa Final
+Una vez ejecutado, navega por diferentes sitios web (YouTube, Netflix, etc.) para generar tráfico real.
+El programa mostrará en consola las IPs detectadas en tiempo real.
+Pulsa Ctrl + C para detener la captura de forma segura.
+El script generará automáticamente el archivo mapa_mundial.html con el dashboard final.
+
+
 
