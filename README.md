@@ -24,7 +24,7 @@
 
 Sigue estos pasos exactos para configurar el proyecto en tu máquina local:
 
-### 1. Clonar el repositorio
+### Clonar el repositorio
 ```bash
 git clone [https://github.com/TuUsuario/NetVisualizer.git](https://github.com/TuUsuario/NetVisualizer.git)
 cd NetVisualizer
@@ -39,14 +39,14 @@ python -m venv venv
 # Instalar dependencias necesarias
 pip install scapy plotly requests pandas
 
-# 2. Ejecución con Privilegios 
+# Ejecución con Privilegios 
 [!!!IMPORTANTE]
 Para capturar tráfico de red, Windows requiere permisos de Administrador. Asegúrate de ejecutar VS Code o la Terminal como Administrador.
 
 python main.py
 
 
-# 3. Generar el Mapa Final 
+# Generar el Mapa Final 
 Una vez ejecutado, navega por diferentes sitios web (YouTube, Netflix, etc.) para generar tráfico real.
 El programa mostrará en consola las IPs detectadas en tiempo real.
 Pulsa Ctrl + C para detener la captura de forma segura.
