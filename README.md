@@ -44,7 +44,8 @@ pip install scapy plotly requests pandas
 [!!IMPORTANTE]
 Para capturar tráfico de red, Windows requiere permisos de Administrador. Asegúrate de ejecutar VS Code o la Terminal como Administrador.
 
-``` python main.py
+```bash
+python main.py
 
 
 ### 4. Generar el Mapa
